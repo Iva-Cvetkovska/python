@@ -113,14 +113,14 @@ def recursive_best_first_search(problem, h=None):
 
     def RBFS(problem, node, flimit):
         if problem.goal_test(node.state):
-            return node, 0  # (втората вредност е неважна)
+            return node, 0  # (the second value is not important)
         successors = node.expand(problem)
         if len(successors) == 0:
             return None, infinity
         for s in successors:
             s.f = max(s.path_cost + h(s), node.f)
         while True:
-            # Подреди ги според најниската f вредност
+            # Sort them by lowest f-value
             successors.sort(key=lambda x: x.f)
             best = successors[0]
             if best.f > flimit:
