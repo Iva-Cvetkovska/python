@@ -3,21 +3,20 @@ from sys import maxsize as infinity
 from searching_framework.utils import Node, PriorityQueue
 
 """
-Информирано пребарување во рамки на граф
+Informed search in graphs
 """
 
 
 def memoize(fn, slot=None):
-    """ Запамети ја пресметаната вредност за која била листа од
-    аргументи. Ако е специфициран slot, зачувај го резултатот во
-    тој slot на првиот аргумент. Ако slot е None, зачувај ги
-    резултатите во речник.
+    """ Remember the calculated value for any given list of arguments.
+    If slot is specified, store the result in that slot as first argument.
+    If slot is None, save the results in a dictionary.
 
-    :param fn: зададена функција
+    :param fn: assigned function
     :type fn: function
-    :param slot: име на атрибут во кој се чуваат резултатите од функцијата
+    :param slot: name of the attribute in which we store the results from the function
     :type slot: str
-    :return: функција со модификација за зачувување на резултатите
+    :return: function with a modified logic for storing the results
     :rtype: function
     """
     if slot:
@@ -39,14 +38,13 @@ def memoize(fn, slot=None):
 
 
 def best_first_graph_search(problem, f):
-    """Пребарувај низ следбениците на даден проблем за да најдеш цел. Користи
-     функција за евалуација за да се одлучи кој е сосед најмногу ветува и
-     потоа да се истражи. Ако до дадена состојба стигнат два пата, употреби
-     го најдобриот пат.
+    """Look through the successors of a problem to find a goal.
+     Use an evaluation function for deciding which neighbour is worth exploring.
+     If two different paths reach the same state, use the better one.
 
-    :param problem: даден проблем
+    :param problem: assigned problem
     :type problem: Problem
-    :param f: дадена функција за евалуација (проценка)
+    :param f: assigned function for evaluation
     :type f: function
     :return: Node or None
     :rtype: Node
@@ -75,11 +73,11 @@ def best_first_graph_search(problem, f):
 
 
 def greedy_best_first_graph_search(problem, h=None):
-    """ Greedy best-first пребарување се остварува ако се специфицира дека f(n) = h(n).
+    """ Greedy best-first search is executed if f(n) = h(n) is specified.
 
-    :param problem: даден проблем
+    :param problem: assigned problem
     :type problem: Problem
-    :param h: дадена функција за хевристика
+    :param h: assigned heuristic function
     :type h: function
     :return: Node or None
     """
@@ -88,11 +86,11 @@ def greedy_best_first_graph_search(problem, h=None):
 
 
 def astar_search(problem, h=None):
-    """ A* пребарување е best-first graph пребарување каде f(n) = g(n) + h(n).
+    """ A* search is best-first graph search where f(n) = g(n) + h(n).
 
-    :param problem: даден проблем
+    :param problem: assigned problem
     :type problem: Problem
-    :param h: дадена функција за хевристика
+    :param h: assigned heuristic function
     :type h: function
     :return: Node or None
     """
@@ -101,13 +99,13 @@ def astar_search(problem, h=None):
 
 
 def recursive_best_first_search(problem, h=None):
-    """Recursive best first search - ја ограничува рекурзијата
-    преку следење на f-вредноста на најдобриот алтернативен пат
-    од било кој јазел предок (еден чекор гледање нанапред).
+    """Recursive best first search - it limits the recursion by
+    following the f-value of the best alternative path
+    from any ancestor Node (looking one step further).
 
-    :param problem: даден проблем
+    :param problem: assigned problem
     :type problem: Problem
-    :param h: дадена функција за хевристика
+    :param h: assigned heuristic function
     :type h: function
     :return: Node or None
     """
