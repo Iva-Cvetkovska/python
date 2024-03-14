@@ -8,3 +8,6 @@ By using both knight and bishop, we mimic the same movements as in chess and try
 
 # Snake
 In this problem, there is an additional layer of complexity: we need to keep track of the **direction** in which the snake is facing. Possible directions are: north (N), south (S), east (E), west (W). The objective is to **eat all green apples** and avoid the red ones as they are poisonous. The only **allowed actions** are moveForward, turnLeft and turnRight. 
+
+# Football
+In this playing field we have a player and a ball. The objective is to push the ball to the goal fields without hitting enemies. The enemies and goal have fixed positions. Additionally the ball is not suppose to enter enemy neighbouring fields while the player is not allowed to enter the same field as the enemies or ball.
