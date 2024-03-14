@@ -110,4 +110,7 @@ if __name__ == '__main__':
     snake = Snake(red_apples, (((0, 9), (0, 8), (0, 7)), 'S', tuple(green_apples)))
     result = breadth_first_graph_search(snake)
 
-    print(result.solution())
+    if result is None:
+        print([])
+    else:
+        print(result.solution())
