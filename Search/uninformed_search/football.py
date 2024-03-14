@@ -24,7 +24,7 @@ class Football(Problem):
             new_bx, new_by = bx, by + 1
             if (new_x, new_y) == (bx, by) and self.check_ball_position(new_bx, new_by):
                 successors['Push the ball up'] = ((new_x, new_y), (new_bx, new_by))
-            else:
+            elif (new_x, new_y) != (bx, by):
                 successors['Move the player up'] = ((new_x, new_y), (bx, by))
 
         # Down
@@ -33,7 +33,7 @@ class Football(Problem):
             new_bx, new_by = bx, by - 1
             if (new_x, new_y) == (bx, by) and self.check_ball_position(new_bx, new_by):
                 successors['Push the ball down'] = ((new_x, new_y), (new_bx, new_by))
-            else:
+            elif (new_x, new_y) != (bx, by):
                 successors['Move the player down'] = ((new_x, new_y), (bx, by))
 
         # Right
@@ -42,7 +42,7 @@ class Football(Problem):
             new_bx, new_by = bx + 1, by
             if (new_x, new_y) == (bx, by) and self.check_ball_position(new_bx, new_by):
                 successors['Push the ball right'] = ((new_x, new_y), (new_bx, new_by))
-            else:
+            elif (new_x, new_y) != (bx, by):
                 successors['Move the player right'] = ((new_x, new_y), (bx, by))
 
         # Up-right diagonally
@@ -51,7 +51,7 @@ class Football(Problem):
             new_bx, new_by = bx + 1, by + 1
             if (new_x, new_y) == (bx, by) and self.check_ball_position(new_bx, new_by):
                 successors['Push the ball diagonally up-right'] = ((new_x, new_y), (new_bx, new_by))
-            else:
+            elif (new_x, new_y) != (bx, by):
                 successors['Move the player diagonally up-right'] = ((new_x, new_y), (bx, by))
 
         # Down-right diagonally
@@ -60,7 +60,7 @@ class Football(Problem):
             new_bx, new_by = bx + 1, by - 1
             if (new_x, new_y) == (bx, by) and self.check_ball_position(new_bx, new_by):
                 successors['Push the ball diagonally down-right'] = ((new_x, new_y), (new_bx, new_by))
-            else:
+            elif (new_x, new_y) != (bx, by):
                 successors['Move the player diagonally down-right'] = ((new_x, new_y), (bx, by))
 
         return successors
@@ -88,4 +88,9 @@ if __name__ == '__main__':
     football = Football((human, ball), ((7, 2), (7, 3)))
     result = breadth_first_graph_search(football)
 
-    print(result.solution())
+    if result is None:
+        print([])
+    else:
+        print(result.solution())
+
+
