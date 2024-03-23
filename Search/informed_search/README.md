@@ -7,4 +7,4 @@ A farmer with a wolf, a goat, and a cabbage must cross a river by boat. The boat
 
 # Star Collector
 Given a graph like in the picture, the explorer needs to collect all stars by visiting the least nodes possible. Additionally, the idea is to calculate and decide which one of the 4 starting positions is the most optimal one.
-![Screenshot 2024-03-23 210928.png](..%2F..%2F..%2F..%2FPictures%2FScreenshots%2FScreenshot%202024-03-23%20210928.png)
+![Screenshot 2024-03-23 210928](https://github.com/Iva-Cvetkovska/python/assets/148893109/1b5eb26d-4879-4dff-ab86-fa0d24766d9b)
