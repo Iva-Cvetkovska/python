@@ -11,3 +11,6 @@ Given a graph like in the picture, the explorer needs to collect all stars by vi
 
 # Climber
 A human that can only move upwards tries to reach his house. With every step the human makes, the house moves horizontally. Additionally, the human can only step on the allowed tiles and even jump for two steps if possible.
+
+# Labrinth
+In a board filled with walls, our human needs to get to his house. One helpful detail here is that he can move 2 or 3 fields to the right in one go.
