@@ -11,3 +11,5 @@ Switching from JavaScript to this language really came naturally to me and I sti
 **Constraint Satisfaction Problems**: various problems solved with CSP logic, using the package <i>constraint</i>.
 
 **Decision Trees**: supervised learning technique used for classification problems by implementing RandomForestClassifier and DecisionTreeClassifier from the package <i>sklearn</i>. 
+
+**Naive Bayes**: supervised learning technique used for classification problems by implementing CategoricalNB and GaussianNB from the package <i>sklearn</i>. 
